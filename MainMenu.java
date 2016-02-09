@@ -8,23 +8,33 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.Switch;
 
 
-public class MainMenu extends Activity implements OnClickListener{
+public class MainMenu extends Activity implements OnClickListener {
 
 
-
-   Button btnAbout;
+    Button btnAbout;
+    Button btnHelp;
+    Button btnExit;
+    Button btnHi;
+    Button btnPlay;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        btnAbout = (Button)findViewById(R.id.btnAbout);
+        btnAbout = (Button) findViewById(R.id.btnAbout);
         btnAbout.setOnClickListener(this);
-;    }
+        btnHelp = (Button) findViewById(R.id.btnHelp);
+        btnHelp.setOnClickListener(this);
+        btnExit = (Button) findViewById(R.id.btnExit);
+        btnExit.setOnClickListener(this);
+        btnHi = (Button) findViewById(R.id.btnHi);
+        btnHi.setOnClickListener(this);
+        btnPlay = (Button) findViewById(R.id.btnHi);
+        btnPlay.setOnClickListener(this);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -53,11 +63,47 @@ public class MainMenu extends Activity implements OnClickListener{
         return null;
     }
 
-    public void onClick(View v){
-        switch (v.getId())
-        {
+    private Void btnHelpClick() {
+        startActivity(new Intent("Mastermind.Help"));
+        return null;
+    }
+
+    private Void btnHiClick() {
+        startActivity(new Intent("Mastermind.Hi"));
+        return null;
+    }
+
+    private Void btnPlayClick() {
+        startActivity(new Intent("Mastermind.Main"));
+        return null;
+    }
+
+    private Void btnExitClick() {
+        finish();
+        System.exit(0);
+        return null;
+    }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.btnAbout:
                 btnAboutClick();
+                break;
+
+            case R.id.btnHelp:
+                btnHelpClick();
+                break;
+
+            case R.id.btnExit:
+                btnExitClick();
+                break;
+
+            case R.id.btnHi:
+                btnHiClick();
+                break;
+
+            case  R.id.btnPlay:
+                btnPlayClick();
                 break;
 
         }
