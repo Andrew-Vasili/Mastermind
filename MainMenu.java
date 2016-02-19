@@ -102,7 +102,7 @@ public class MainMenu extends Activity implements OnClickListener {
                 btnHiClick();
                 break;
 
-            case  R.id.btnPlay:
+            case R.id.btnPlay:
                 btnPlayClick();
                 break;
 
