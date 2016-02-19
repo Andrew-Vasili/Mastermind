@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "uk.ac.bmth.aprog.mastermind"
+        applicationId "uk.ac.bmth.aprog.mastermindi7288182"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
