@@ -52,11 +52,4 @@
         android:backgroundTint="#BCC6CC"
         android:text="EXIT" />
 
-    <Button
-        android:id="@+id/btnHi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|bottom"
-        android:text="HI-SCORE" />
-
 </FrameLayout>

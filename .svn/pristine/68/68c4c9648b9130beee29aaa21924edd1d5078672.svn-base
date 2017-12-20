@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0020C2"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/txtHi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="HISCORES"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFD700"
+        android:textIsSelectable="true"
+        android:textSize="46sp" />
+
+    <ListView
+        android:id="@+id/listHi"
+        android:layout_width="match_parent"
+        android:layout_height="299dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.27"
+        android:choiceMode="none"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:scrollingCache="false"
+        android:smoothScrollbar="true" />
+</LinearLayout><!-- From: file:/F:/Users/Drew/Documents/App%20Dev%20Applications/Files/MasterMind(i7288182)/app/src/main/res/layout/activity_hiscore_layout.xml -->

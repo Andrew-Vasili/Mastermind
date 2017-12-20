@@ -4,16 +4,26 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="MainMenu"
+            android:name="SplashScreen"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="MainMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Mastermind.Menu" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
@@ -38,16 +48,6 @@
         </activity>
 
         <activity
-            android:name="HiscorePage"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="Mastermind.HiScore" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
             android:name="mainGame"
             android:label="@string/app_name" >
             <intent-filter>
@@ -57,6 +57,25 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="WinPage"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Mastermind.Win" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="LosePage"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Mastermind.Lose" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
 
 

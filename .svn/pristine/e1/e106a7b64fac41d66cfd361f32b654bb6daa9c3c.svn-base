@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0020C2">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:text="PLAY"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFD700"
+        android:textSize="45sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listGuess"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtTitle"
+        android:layout_toLeftOf="@+id/txtTitle"
+        android:layout_toStartOf="@+id/txtTitle"
+        android:stackFromBottom="true"
+        android:transcriptMode="normal"
+        android:touchscreenBlocksFocus="false"
+        android:headerDividersEnabled="false"
+        android:focusable="false"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="true"
+        android:background="#C0C0C0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="SCORE"
+        android:id="@+id/txtScore"
+        android:layout_marginTop="28dp"
+        android:layout_alignTop="@+id/listGuess"
+        android:layout_toRightOf="@+id/txtTitle"
+        android:layout_toEndOf="@+id/txtTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0000"
+        android:id="@+id/txtTotal"
+        android:layout_below="@+id/txtScore"
+        android:layout_alignRight="@+id/txtScore"
+        android:layout_alignEnd="@+id/txtScore" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice1"
+        android:layout_marginBottom="145dp"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:maxHeight="40dp"
+        android:longClickable="false"
+        android:layout_alignBottom="@+id/listGuess"
+        android:layout_centerHorizontal="true"
+        android:maxWidth="40dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice2"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:maxHeight="20dp"
+        android:longClickable="false"
+        android:layout_alignBottom="@+id/choice1"
+        android:layout_toRightOf="@+id/choice1"
+        android:layout_toEndOf="@+id/choice1" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice3"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:maxHeight="20dp"
+        android:longClickable="false"
+        android:layout_alignTop="@+id/choice2"
+        android:layout_toRightOf="@+id/choice2"
+        android:layout_toEndOf="@+id/choice2" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice4"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:maxHeight="20dp"
+        android:longClickable="false"
+        android:layout_alignBottom="@+id/choice3"
+        android:layout_toRightOf="@+id/choice3"
+        android:layout_toEndOf="@+id/choice3" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice5"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:maxHeight="20dp"
+        android:longClickable="false"
+        android:layout_alignBottom="@+id/choice4"
+        android:layout_toRightOf="@+id/choice4"
+        android:layout_toEndOf="@+id/choice4" />
+
+</RelativeLayout>

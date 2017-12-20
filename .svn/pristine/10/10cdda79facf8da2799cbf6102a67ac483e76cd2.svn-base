@@ -1,0 +1,114 @@
+package uk.ac.bmth.aprog.mastermind;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+import java.util.Random;
+
+
+public class mainGame extends Activity {
+
+    int[] aiChoice = new int[5]; //Array for colour values colour values below
+    int[] userChoice = new int[5]; //Array for users chosen colors
+    int score = 0;
+
+    /**
+     * Values // Colours
+     *  0 / Red
+     *  1 / Blue
+     *  2 / Green
+     *  3 / Yellow
+     *  4 / Purple
+     *  5 /
+     */
+
+
+    /**
+     * AI CHOICE CREATOR
+     * Allows me to randomly create colours using ints
+     */
+    public void aiRandom() {
+        TextView []txtArray=new TextView[5];
+        int x = 0;
+        while (x > 5) {
+            Random rand = new Random();
+            aiChoice[x] = rand.nextInt(4) + 1; //Random value of up 1 - 4 change if I need to up colour count
+            x = x + 1;
+            txtArray[x].setText("x");
+        }
+
+
+
+    }
+
+    public void compare() {
+
+        int x = 0;
+        int y = 0;
+        while(x<5){
+
+            while (y<5){
+                if (aiChoice[x] == userChoice[y]){
+
+                }
+                else{
+
+
+                }
+
+            }
+
+            x = x+1;
+            y=0;
+        }
+
+    }
+
+    ImageButton button1,button2,button3,button4;
+    TextView clam;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_game_layout);
+        aiRandom();
+        score = 40;
+
+
+        button1 = (ImageButton)findViewById(R.id.choice1);
+        button1.setOnClickListener(imgButtonHandler);
+        button2 = (ImageButton)findViewById(R.id.choice2);
+        button2.setOnClickListener(imgButtonHandler);
+        button3 = (ImageButton)findViewById(R.id.choice3);
+        button3.setOnClickListener(imgButtonHandler);
+        button4 = (ImageButton)findViewById(R.id.choice4);
+        button4.setOnClickListener(imgButtonHandler);
+
+        clam = (TextView)findViewById(R.id.txtTotal);
+    }
+
+
+    View.OnClickListener imgButtonHandler = new View.OnClickListener() {
+
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.choice1:
+                    userChoice[0] = userChoice[0] + 1;
+
+                    if (userChoice[0] > 6 ){
+                        userChoice[0] = 0;
+                }
+
+
+
+                case R.id.choice2:
+
+
+            }
+        }
+    };
+}
